@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import.meta.env.VITE_APP_TITLE;
 ---
 
 <Layout title="Welcome to Astro.">
@@ -8,7 +9,7 @@ import Card from '../components/Card.astro';
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
 			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			<strong>Code Challenge: </strong> 
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
@@ -94,3 +95,11 @@ import Card from '../components/Card.astro';
 		padding: 0;
 	}
 </style>
+
+<script>
+	console.log("import.meta.env.VITE_APP_TITLE");
+	var t1 = import.meta.env.VITE_APP_TITLE
+	console.log(t1);
+	var t2 = import.meta.env.PUBLIC_TODOS
+	console.log(t2);
+</script>
